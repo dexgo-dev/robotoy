@@ -21,6 +21,6 @@ class Robot
 	end
 
 	def validate_direction(dir)
-		return true # stub this bit.
+		return ["NORTH", "SOUTH", "WEST", "EAST"].include?(dir)
 	end
 end
