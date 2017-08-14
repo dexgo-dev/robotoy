@@ -10,9 +10,9 @@ Gem::Specification.new do |spec|
   spec.email         = ["dexterfgo@gmail.com"]
 
   spec.summary       = "Toy Robot implementation."
-  spec.description   = "The applica8on is a simula8on of a toy robot moving on a square tabletop, of dimensions 5 units x 5 units. There are no other obstructions on the table surface. The robot is free to roam around the surface of the table, but must be prevented from falling to destruc8on. Any movement that would result in the robot falling from the table must be prevented, however further valid movement commands must still be allowed."
+  spec.description   = "The application is a simula8on of a toy robot moving on a square tabletop, of customizable dimensions. There are no other obstructions on the table surface. The robot is free to roam around the surface of the table, but must be prevented from falling to destruc8on. Any movement that would result in the robot falling from the table must be prevented, however further valid movement commands must still be allowed."
   spec.homepage      = "https://github.com/dexterfgo/robotoy"
-  spec.license       = "MIT"
+  spec.license       = ""
 
   # Prevent pushing this gem to RubyGems.org. To allow pushes either set the 'allowed_push_host'
   # to allow pushing to a single host or delete this section to allow pushing to any host.

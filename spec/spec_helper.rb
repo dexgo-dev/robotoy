@@ -1,4 +1,7 @@
 require "bundler/setup"
+
+$TESTING = true;
+
 require "RoboToy"
 
 RSpec.configure do |config|
