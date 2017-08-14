@@ -4,6 +4,7 @@ require "RoboToy/robot"
 describe Robot do
 	before (:each) do
 		@robot_test = Robot.new
+		Table.instance.setup(5,5)
 	end 
 
 	it "is a Robot." do

@@ -1,15 +1,22 @@
 require 'singleton'
 
 class Table
-	# attr_reader :width
-	# attr_reader :length
+	attr_reader :x_range
+	attr_reader :y_range
 	include Singleton
 
-	def initialize(width: 5,length: 5)
+	def setup(width,length)
 		@x_range = Range.new(0,width,false)
 		@y_range = Range.new(0,length,false)
 		Tracer.debug "x_range: " + @x_range.to_s
 		Tracer.debug "y_range: " + @y_range.to_s
+	end
+
+	def initialize(width: 5,length: 5)
+		Tracer.debug "x_range: " + @x_range.to_s
+		Tracer.debug "y_range: " + @y_range.to_s
+		@x_range = Range.new(0,width,false) if @x_range.nil?
+		@y_range = Range.new(0,length,false) if @y_range.nil?
 	end
 
 	def isXinHorizontalRange(x)
