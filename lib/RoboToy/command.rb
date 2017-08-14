@@ -33,7 +33,11 @@ class Command
 		return COMMAND_REQUIRES_PARAMS if command == "PLACE"
 		return INVALID_COMMAND unless VALID_COMMANDS.include?(command)
 		return VALID_COMMAND
-	end 
+	end
+
+	def is_number(param)
+		/\A[-+]?\d+\z/ === param
+	end
 
 	def validate_params(params)
 		case @instruction
@@ -43,8 +47,12 @@ class Command
 					return NOT_ENOUGH_PARAMS
 				elsif @params.length > 3
 					return ACCEPTED_WITH_IGNORED_PARAMS
+				elsif !(is_number(@params[0]))
+					return INVALID_PARAMS_POS_X
 				elsif !(Table.instance.isXinHorizontalRange(@params[0].to_i))
 					return INVALID_PARAMS_POS_X
+				elsif !(is_number(@params[1]))
+					return INVALID_PARAMS_POS_Y
 				elsif !(Table.instance.isYinVerticalRange(@params[1].to_i))
 					return INVALID_PARAMS_POS_Y
 				elsif not VALID_DIRECTIONS.include?(@params[2])
