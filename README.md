@@ -162,6 +162,12 @@ for debug runs.
 Bug reports and pull requests are welcome on GitHub at [RoboToy Issues Page](https://github.com/dexterfgo/robotoy/issues). This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [Contributor Covenant](http://contributor-covenant.org) code of conduct.
 
 
+## Credits and Ideas
+I had a look at previous work to whip up some inspiration for this and some ideas on how to solve some obstructions I had. Thanks to these githubs:
+
+- [Drzel's Another Toy Robot](https://github.com/drzel/another_toy_robot)
+- [Rafael Chefe's Toy Robot](https://github.com/RafaelChefe/toy_robot.git)
+
 ## License
 
 This app is available as open source under the terms of the [MIT License](http://opensource.org/licenses/MIT).
